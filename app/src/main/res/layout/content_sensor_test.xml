@@ -12,7 +12,35 @@
         android:id="@+id/sensor_list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:text="TextView"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sensor_set_capture"
+        android:layout_width="354dp"
+        android:layout_height="83dp"
+        android:layout_marginBottom="8dp"
+        android:text="SET"
+        app:layout_constraintBottom_toTopOf="@+id/sensor_list"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/sensor_test_capture"
+        android:layout_width="349dp"
+        android:layout_height="296dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="1dp"
+        android:text="TEST"
+        app:layout_constraintBottom_toTopOf="@+id/sensor_set_capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

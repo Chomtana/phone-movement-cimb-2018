@@ -5,20 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context=".DashboardActivity"
-    tools:showIn="@layout/activity_dashboard">
+    tools:context=".tool.CircleActivity"
+    tools:showIn="@layout/activity_circle">
 
-    <TextView
-        android:id="@+id/your_balance_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Identity Validation Success"
-        android:textColor="#009900"
-        android:textSize="60dp"
+    <ImageView
+        android:id="@+id/circle_pin"
+        android:layout_width="266dp"
+        android:layout_height="222dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.868"
+        app:srcCompat="@drawable/clock" />
 </android.support.constraint.ConstraintLayout>

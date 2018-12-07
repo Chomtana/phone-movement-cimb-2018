@@ -6,9 +6,9 @@ public class NoisyNumSeries {
     double[] X;
     double[] Y;
 
-    public double losslevel = 0.25;
-    public double movelevel = 0.1;
-    public double stepsize = 0.01;
+    public double losslevel = 0.3;
+    public double movelevel = 20;
+    public double stepsize = 0.1;
 
     public class Compare {
         public double[] Xs; //X static (saved in db)
@@ -55,9 +55,12 @@ public class NoisyNumSeries {
         public void prep() {
             Xc = Xt.clone();
             Yc = Yt.clone();
-          /*for(int i = 0;i<Xc.length;i++) {
+            for(int i = 0;i<Xc.length;i++) {
+                Xc[i] *= Xs[Xs.length-1]/Xc[Xc.length-1];
+            }
+          for(int i = 0;i<Xc.length;i++) {
             Xc[i] -= movelevel;
-          }*/
+          }
         }
 
         public double[] loss() {
@@ -75,7 +78,8 @@ public class NoisyNumSeries {
                 Double[] y = resolveAllX();
                 for(int i = 0;i<y.length;i++) {
                     if (y[i]!=null) {
-                        res[i] = Math.min(res[i],(y[i]-Ys[i])*(y[i]-Ys[i]));
+                        //res[i] = Math.min(res[i],(y[i]-Ys[i])*(y[i]-Ys[i]));
+                        res[i] = Math.min(res[i],Geo.angled(y[i],Ys[i])*Geo.angled(y[i],Ys[i]));
                     }
                 }
             }
@@ -87,13 +91,35 @@ public class NoisyNumSeries {
             double sum = 0;
             double[] L = loss();
             for(int i = 0;i<L.length;i++) {
-                sum += L[i];
+                if (L[i]<10 && !Double.isNaN(L[i])) {
+                    sum += L[i];
+                }
             }
             return sum;
         }
 
         public double loss_mean() {
-            return loss_sum()/((double)Xs.length);
+            int len = 0;
+            double sum = 0;
+            double[] L = loss();
+            for(int i = 0;i<L.length;i++) {
+                if (L[i]<10 && !Double.isNaN(L[i])) {
+                    sum += L[i];
+                    len++;
+                }
+            }
+            return sum/len;
+        }
+
+        public int loss_len() {
+            int len = 0;
+            double[] L = loss();
+            for(int i = 0;i<L.length;i++) {
+                if (L[i]<10 && !Double.isNaN(L[i])) {
+                    len++;
+                }
+            }
+            return len;
         }
 
         public double loss_max() {
@@ -121,7 +147,7 @@ public class NoisyNumSeries {
     public boolean equals(Object obj) {
         if (obj instanceof NoisyNumSeries) {
             Compare c = this.comp((NoisyNumSeries) obj);
-            return c.loss_max()<losslevel;
+            return c.loss_mean()<losslevel;
         } else {
             return super.equals(obj);
         }

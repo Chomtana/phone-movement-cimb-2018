@@ -13,9 +13,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 
+import com.example.chomt.myapplication.tool.CircleActivity;
 import com.example.chomt.myapplication.tool.Href;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static String username = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +46,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        Href.btn(R.id.login_btn,MainActivity.this,PinActivity.class);
-        //          button_id       fromClass.this          ToClass.class
+        if (MainActivity.username == "") {
+            Href.btn(R.id.login_btn, MainActivity.this, CircleActivity.class);
+        } else {
+            Href.btn(R.id.login_btn, MainActivity.this, PinActivity.class);
+            //          button_id       fromClass.this          ToClass.class
+        }
 
         Href.btn(R.id.sensor_list_href_btn, MainActivity.this, SensorTest.class);
 
