@@ -6,6 +6,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.util.Pair;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
         Href.btn(R.id.login_btn,MainActivity.this,PinActivity.class);
         //          button_id       fromClass.this          ToClass.class
+
+        Href.btn(R.id.sensor_list_href_btn, MainActivity.this, SensorTest.class);
+
+        Pair<Integer,Integer> p = new Pair<>(3,5);
+        Log.d("MainActivity",String.valueOf(p.first));
+        Log.d("MainActivity",String.valueOf(p.second));
     }
 
     @Override
