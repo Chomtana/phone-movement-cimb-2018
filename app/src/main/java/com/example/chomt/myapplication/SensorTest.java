@@ -36,9 +36,9 @@ public class SensorTest extends AppCompatActivity implements SensorEventListener
     private boolean capture_start = false;
     private boolean capture_test = false;
     private boolean capture_test_start = false;
-    private String Xts = "";
-    private String[] Yts = new String[] {"","","","","","","","",""};
-    private double[] Yts1 = new double[] {0,0,0,0,0,0,0,0,0};
+    private static String Xts = "";
+    private static String[] Yts = new String[] {"","","","","","","","",""};
+    private static double[] Yts1 = new double[] {0,0,0,0,0,0,0,0,0};
     private String Xtc = "";
     private String[] Ytc = new String[] {"","","","","","","","",""};
     private double[] Ytc1 = new double[] {0,0,0,0,0,0,0,0,0};
@@ -72,18 +72,21 @@ public class SensorTest extends AppCompatActivity implements SensorEventListener
         capture_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView sensorTextView = (TextView) findViewById(R.id.sensor_list);
                 Log.d("xxx","yyy");
                 if (!capture_test) {
                     capture_test = true;
                     Xtc = "";
                     Ytc = new String[] {"","","","","","","","",""};
                     start_du = 999999999999999L;
+                    sensorTextView.setText("DETECTING PATTERN...");
                 } else {
                     capture_test = false;
                     capture_test_start = true;
                     Log.d("Xts",Xts);
                     Log.d("Yts0",Yts[1]);
                     //0,2 fail 3,5 pordai 1,4 perfect
+                    sensorTextView.setText("");
 
                     //String xx = "0 20 40 53 61 81 101 120 140 160 180 200 220 246 252 260 279 300 320 340 360 379 400 420 440 458 460 480 500 520 540 560 580 600 620 639 657 660 680 700 720 740 760 780 799 819 839 857 860 879 900 920 940 960 980 1000 1021 1039 1057 1060 1080 1102 1120 1140 1160".trim();
                     //String yy = "-0.15229319 -0.14717388 -0.1439078 -0.14251652 -0.14647655 -0.14309944 -0.13026834 -0.121029906 -0.12082707 -0.117551185 -0.13037747 -0.120145015 -0.116469555 -0.11590991 -0.10977259 -0.10743626 -0.106229976 -0.11048394 -0.113377 -0.10604049 -0.11158529 -0.118140735 -0.12158251 -0.13757141 -0.15755802 -0.14941499 -0.16394894 -0.17836668 -0.19508362 -0.22363517 -0.25404385 -0.2881784 -0.31771147 -0.34725532 -0.38058814 -0.42380103 -0.43969348 -0.47858277 -0.5156763 -0.54942524 -0.58317345 -0.61012685 -0.6381559 -0.6575065 -0.6737946 -0.6838523 -0.7004255 -0.7181365 -0.7241451 -0.7292076 -0.73690987 -0.74391264 -0.74694836 -0.7533049 -0.7603569 -0.7593505 -0.7574228 -0.757364 -0.7385876 -0.7435196 -0.7472431 -0.75327766 -0.75443727 -0.75520533 -0.75326097".trim();
@@ -173,15 +176,18 @@ public class SensorTest extends AppCompatActivity implements SensorEventListener
                     //Log.d("Loss mean 6",String.valueOf(c6.loss_mean()));
                     //Log.d("Loss mean 7",String.valueOf(c7.loss_mean()));
                     //Log.d("Loss mean 8",String.valueOf(c8.loss_mean()));
-                    double totalloss = (c0.loss_mean()+c1.loss_mean()+c2.loss_mean()/*+c3.loss_mean()+c4.loss_mean()+c5.loss_mean()/*+c6.loss_mean()*//*+c7.loss_mean()*//*+c8.loss_mean()*/)/3;
-                    Log.d("Loss",String.valueOf( totalloss ));
-                    if(totalloss<0.2) {
+                    //double totalloss = (c0.loss_mean()+c1.loss_mean()+c2.loss_mean()/*+c3.loss_mean()+c4.loss_mean()+c5.loss_mean()/*+c6.loss_mean()*//*+c7.loss_mean()*//*+c8.loss_mean()*/)/3;
+                    //Log.d("Loss",String.valueOf( totalloss ));
+
+                    if(c0.loss_mean()<0.2 && c1.loss_mean()<0.2 && c2.loss_mean()<0.2) {
                         //TextView sensorTextView = (TextView) findViewById(R.id.sensor_list);
                         //sensorTextView.setText("Passed");
+                        sensorTextView.setText("");
                         Href.href(SensorTest.this,DashboardActivity.class);
                     } else {
-                        TextView sensorTextView = (TextView) findViewById(R.id.sensor_list);
-                        sensorTextView.setText("Not Passed");
+
+                        sensorTextView.setText("Wrong pattern");
+                        //sensorTextView.setTextColor(0xaa0000);
                     }
                 }
             }
@@ -191,15 +197,17 @@ public class SensorTest extends AppCompatActivity implements SensorEventListener
         capture_test_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                TextView sensorTextView = (TextView) findViewById(R.id.sensor_list);
                 if (!capture) {
                     capture = true;
                     Xts = "";
                     Yts = new String[]{"", "", "", "", "", "", "", "", ""};
                     start_du = 999999999999999L;
+                    sensorTextView.setText("SETTING UP...");
                 } else {
                     capture = false;
                     capture_start = true;
-
+                    sensorTextView.setText("");
                 }
             }
         });

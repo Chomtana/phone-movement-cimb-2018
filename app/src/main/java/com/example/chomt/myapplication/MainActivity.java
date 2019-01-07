@@ -19,6 +19,8 @@ import com.example.chomt.myapplication.tool.Href;
 public class MainActivity extends AppCompatActivity {
 
     public static String username = "";
+    private static String Xts = "";
+    private static String[] Yts = new String[] {"","","","","","","","",""};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,14 +29,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
 
         /*Button login_btn = (Button) findViewById(R.id.login_btn);
 
@@ -46,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-        if (MainActivity.username == "") {
+        /*if (MainActivity.username == "") {
             Href.btn(R.id.login_btn, MainActivity.this, CircleActivity.class);
         } else {
             Href.btn(R.id.login_btn, MainActivity.this, PinActivity.class);
             //          button_id       fromClass.this          ToClass.class
-        }
+        }*/
 
         Href.btn(R.id.sensor_list_href_btn, MainActivity.this, SensorTest.class);
 

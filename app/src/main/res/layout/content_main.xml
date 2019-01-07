@@ -9,25 +9,17 @@
     tools:showIn="@layout/activity_main">
 
     <Button
-        android:id="@+id/login_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:id="@+id/sensor_list_href_btn"
+        android:layout_width="360dp"
+        android:layout_height="157dp"
+        android:layout_marginBottom="8dp"
         android:background="@android:color/holo_red_dark"
         android:text="Login"
         android:textColor="#ffffff"
+        android:textSize="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/sensor_list_href_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:text="Phone movement testing lab"
-        app:layout_constraintBottom_toTopOf="@+id/login_btn"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView

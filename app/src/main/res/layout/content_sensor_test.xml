@@ -8,39 +8,62 @@
     tools:context=".SensorTest"
     tools:showIn="@layout/activity_sensor_test">
 
-    <TextView
-        android:id="@+id/sensor_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:text="TextView"
-        android:textSize="30dp"
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/sensor_set_capture"
-        android:layout_width="354dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="8dp"
-        android:text="SET"
-        app:layout_constraintBottom_toTopOf="@+id/sensor_list"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/sensor_test_capture"
-        android:layout_width="349dp"
-        android:layout_height="296dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        android:text="TEST"
-        app:layout_constraintBottom_toTopOf="@+id/sensor_set_capture"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Phone movement identity verification"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="To use phone rotation, user must be setup their pattern by pressing SETUP button then move your phone then press SETUP button again to end setup step. Follow same step for login." />
+
+        <Button
+            android:id="@+id/sensor_test_capture"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:text="LOGIN"
+            android:textSize="60dp"
+            android:textColor="#ffffff"
+            android:background="@android:color/holo_red_light"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="249dp" />
+
+        <TextView
+            android:id="@+id/sensor_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="#aa0000"
+            tools:layout_editor_absoluteX="131dp"
+            tools:layout_editor_absoluteY="467dp" />
+
+        <Button
+            android:id="@+id/sensor_set_capture"
+            android:layout_width="378dp"
+            android:layout_height="150dp"
+            android:text="SETUP"
+            android:textSize="40dp"
+            android:textColor="#ffffff"
+            android:background="@android:color/holo_red_dark"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="140dp" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
