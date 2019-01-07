@@ -1,4 +1,4 @@
-# Phone Movement
+# Phone Movement and Rotation Identity Verification
 
 New method of identity verification developed in CIMB 3D Conquest Hackathon 2018 at singapore.
 
@@ -17,6 +17,11 @@ New method of identity verification developed in CIMB 3D Conquest Hackathon 2018
 * Android studio
 * Java
 
+## Camouflage illustration
+
+The question is **Do you see when and where the phone verification process take place?**
+<img src="https://im5.ezgif.com/tmp/ezgif-5-ddb7dba2c33a.gif">
+
 ## Gallery
 
 ### Myself
@@ -31,3 +36,7 @@ New method of identity verification developed in CIMB 3D Conquest Hackathon 2018
 ### At airport
 
 ![Airport](https://lh3.googleusercontent.com/_59wuRiMACIR8L0V3qIL9KIB9ADxLMW5f1g0OE-wDEICu28yq3J7ozPQ9lCOG_71QhBKvnMUv_syce4BEK3jVtIuP3yrNjl8DYTvZkHoJ2ErBnNTDLKFuI86_nax_u_1Eq0H73uwFRuUINzd_BuV7JJRi5A1fTcy9YIRLHyHfpBLG4zwyKRcGhvM3eBF8WPE7eEs2nqzRrnoFYbw3ujSnNJUi3DOcAxXKXqU6bXxAi_8b7ay2x5gsdSKlZK8gT1cyS2oI9ON4Nvx8eTHCCNXg5p1ciMEc44UEndpjeSFS3iPYuT09wvXKMNYDcJTFWVAWND26SGW3sfbtYwxSKfQw66PUW_W-r7a8A1mT8goyDXfVwDBSfn_3SSJh-NNAGhQcYJIKWdfG7A5oM4YBc66dA6C3YY8JUaaQIvxQszZWGYoN3dkHR1p9wTH-WHL_bg3wPu9VngJKyQ-dYjxuVidd-FnbjAYSJQecjRdh8QaLdzwMxjgMd0K7pBidYg2jKVby5_L4iSmm3WASSU_wu5ZSQz6w6c_nr02L8W_5e24nal9544lXAncxB7ivQ4nChd2ZH5eRKqKs6sWp5-Ulpxf64W3k4EI76k2a3H8xvI1quFifIiP2K6ptVOaEsWctWx5GeeM5uaHCVHbufYro8rzCazL=w770-h577-no)
+
+### Overall Thailand Team
+
+![Thailand Team](https://lh3.googleusercontent.com/G4Xwu9TAwYB0LWDErfcjIwpEQrjmGyYfCouZaZF-qf1Bx_zcL6Ahelq3ljAF1gHbkdmUETZ6QlrPNGqEJzgyJ5Lwopp6cA65XMTWecbIpWFSkmDyGh2Ozbv1H95wpfBInfJbYussm4OGzpbCCVjtAjn0wBBH0m7hf4r98sDVwGq7c8znSn38CCbEf90wU9OKaLqxLq6mcopD1te9VtTbqpcm0w7fnbqE6Enu49VazxNf9I8xMBSDa6EV-HQPAqrZaiN9fhgX2jQI6AWJWf4DGs4w_KPfFump7R-F_wIUeTfdaSi2Zm_-bZQqtPyMQuK7gW8_7UennvLzIsHN8nVPvMHC9IjmSxOE9MFrlO8jj4df8OwjV4wUH8cUf4u420XsvmlnvXX1u8Ry4IfFc-F7JJEETDVs2r7zXehxxf_fUZT71MVvlh4iEK3-3oGnfam2iMhSqrOlkjx6CNX3shIVVoWqjG7kdvSLIA8ViyoUict79oJjyw2B1LHjTUQOt1ERMKKGPUh3CfIeDi9GAQq_UvnbiwLA4C8P8eDHleC0C2WqY88PnE7NnvaeKMfzpYR6rEEzAqFV-gmkyxAre7icOSIlkduiWI2CC43pqXpBpjW-d0JWP-zvp2F50rQD-v_BmDaAJDUO3R_IvgN80M0uF6Bh=w770-h577-no)
