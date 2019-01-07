@@ -2,6 +2,8 @@
 
 New method of identity verification developed in CIMB 3D Conquest Hackathon 2018 at singapore.
 
+Presentation file (PPT) can be downloaded [here](https://github.com/Chomtana/phone-movement-cimb-2018/blob/master/CSK_PPT.pptx).
+
 ## Team member
 
 * [Chomtana Chanjaraswichai](https://www.facebook.com/chomtana.chanjaratvichai)
@@ -16,6 +18,24 @@ New method of identity verification developed in CIMB 3D Conquest Hackathon 2018
 
 * Android studio
 * Java
+* Sensors communication
+
+## Similar existing technology (As of 2018)
+
+### Phone orientation, tilt and shake detection
+#### What is the Problem?
+* It isn't detect in high enough resolution.
+* Make it cannot be used as phone verification method due to easy to getting spied.
+#### Why this solution Better?
+* Goal of this solution is to create a high resolution phone movement and rotation detection.
+* Due to high resolution detection, this method has camouflage ability that can secure you from spying, and can create complex pattern of phone movement and rotation.
+
+## Highlight benefits of this method
+
+As stated in the [presentation](https://github.com/Chomtana/phone-movement-cimb-2018/blob/master/CSK_PPT.pptx):
+![Fast](https://lh3.googleusercontent.com/4e8C7WyrI3r82iFqUSM1M0On4kNFkVG4kyXKWxWkWm2PeLE50WoWgLGHTr_74FvhISeTB67j95hemj03gAYEiTTMGdCJuIpKyiZiteOr-cVoeY9ucbaTEb0PQnTY1RDae9bWSaLSgGEtsphFifKty7AGtsWwUWK3YvS0K1jiK6t3LOeQ7K-W7Z2P68jB70JvdsG4xOX12GHW-bI8rXiQtcxWR_lRecscMZtj8MX5YWEeqCuywQBIh6zvEnuSeAwKALRtbhx53rhoLl4spZr-iqmZRuYR0MY9hHZI3SGQK0zeKXh_GNG0oMBc7Ke5fDE5HJYkcBflTF4h0dqdj0qB9an4_ZmfNAbA70LJOE7ydhyXye46pxkTJ9D8OK9LqFviqX8GfoDb4swXa5ZTRiBfi28NUUBiiZl6p7Et64w4nZTo5yt4z7eYGpJZTNXBf-YT3dOX_pmisRASGWiMh9ztPbT7mruwBzGKX6VCFUOVFBc0ucZqDERJXuw2WYZluISNtkq3zCuYkRporhvsWvir8_S8qa8hVY6Z7RoFjOlEjlDfQaJgFVdGtQ0RJhI2GTEKrqH9DgmThVyZFeg7rj-Jv_YskKSF8cVQCIq8eLcPHc8ZSa_30cj6-9NAvfkYSsWPU52i7DtwI-gQS8x01_uQEOUl=w1026-h577-no)
+![Comfortable](https://lh3.googleusercontent.com/eG8_MhawxjPtJ-t2Rkl6nH3ONg3Cof0rZRJnwkqSuZq9g6CoQpSbw-9AE0qYl-8cUBkNm6hFeMIyJy61FC-qVBQ5CW1RUxf9ayYrCajakrcb-UmUSiPiXIxCG2cut0CuutNL4qNeh-6Ks_XSE_nUIf3QJBgzUOxmA6wliDbeRG1ipWDuG3YKxUvGVby4ZONW81KUk3tRkZFMg1JuPYZD7lxLwu-pYbOWeBvBmQ61qUvUxbLI-AAY3wd1K3TggFvnzhMqnJ5ZtcrV4BDojyGzoeNx9SOt7flMzns0jTv24cO2xocR4uwgTTau1t00OWa9R_2c0tjmQUvmXzOJUkRMzHI5u29F_jLWxIRZ7tKMwuiUSE5FxZeQZXJGL79DI6yL40k2UwnnCG1GZqqRtb57wSsHfRZc39SYIAd2S1mfdmsLd9IY85WzzZrC1k1cGd4Nvk8kQ0FBx8_rrO8tWFxHsbOWLKmhy_Z0WMmXzpKH-23q7pfV1aMWFGjgdLQKc-Jn6rOGczZ1IAggMXgczc2O7Q2yhzZ8ey_kAwFrRe4dI-FnrtcK8JVNUWqLHjRizvfNOMAG71N1DGWq5uagMCdXDJmvcappzIPJFE9tnqUYo3U_Isx-T1B2zBOHbfMubZJtl6S6kZE5__sRwBKQA-gqSHik=w1026-h577-no)
+![Camouflage](https://lh3.googleusercontent.com/hBm4KLYlxPtxDY1Dik6hMFy7wSJSBrcfDaN-bSrn70fRxMT29MHygIBowu54cfFX3NLYSO_A2ELTXUV9w1-wkWTeBT_t4iaqIlbyycDDqER05hUlYMG7VB4ZdT9SGms9yGbTlxdCtJ1jJePn-qJYiDXeM62cDiWaYNn2FuqfgYHDFAJFf1OSMPPJVNktPtwJiukvZoJi2haGBDeiJuvZcpp4035aYVXYnPAiRKTo6LZ4i2miM6XyNf7aeOKWQwID4rWCNebjQHLrv66mE4eWHycJPU8xx45ChkvAJwqexkYc1yXcZ0eMALmwKe8KjKhYn3sWh-5WbHysxxfTBmENHo-cH6ibB7CyCMH2x3Yo8QyezYIfwF7Ebhgho-WmwabweJNtRZ99snEwFVOexCB-DUf-eIo4q2AU52Sfl4iCresotetawWSzvM5O0xkH2JWZNpus85NdKJM3NrVm2or48aobka-jcc9YUxt1HXLCCM0I1twiNKqMDqKzAV43Jt97URzjcPtmxBywEk41pmz7F7KGVrBWQHzs90cKetYHQPVUWIL4ebrhgkU_l5ABJLbNYCyVIq6z--HLk4PXTWYw1IrCdi6V95yXIjWtJLfF647ZKZ1eDdbwkHGr7y4pLBeadX7lyqYzMTQd3XoW98J0vKZA=w1026-h577-no)
 
 ## Camouflage illustration
 
